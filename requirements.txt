@@ -6,3 +6,5 @@ plotly
 
 # ImportError: Plotly requires pandas
 pandas
+
+python-dotenv

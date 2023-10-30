@@ -21,6 +21,9 @@ Create a ".env" file and paste in the following contents:
 # this is the ".env" file...
 
 ALPHAVANTAGE_API_KEY="_________"
+
+SENDGRID_API_KEY="TODO"
+SENDER_ADDRESS="ojyun22@gmail.com"
 ```
 
 ## Usage
@@ -35,4 +38,10 @@ Run the unemployment report:
 
 ```sh
 python app/unemployment.py
+```
+
+Send an example email:
+
+```sh
+python app/email_service.py
 ```

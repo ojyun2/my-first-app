@@ -22,8 +22,8 @@ Create a ".env" file and paste in the following contents:
 
 ALPHAVANTAGE_API_KEY="_________"
 
-SENDGRID_API_KEY="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"
-SENDER_ADDRESS="ojyun22@gmail.com"
+SENDGRID_API_KEY="TODO"
+SENDER_ADDRESS="example.gmail.com"
 ```
 
 ## Usage

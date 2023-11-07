@@ -45,3 +45,7 @@ Send an example email:
 ```sh
 python app/email_service.py
 ```
+
+```sh
+python app/my_mod.py
+```

@@ -1,5 +1,5 @@
 
-# IMPORTS AT TOP
+# IMPORTS AT THE TOP
 
 import os
 import json
@@ -12,15 +12,18 @@ from plotly.express import line
 
 from app.email_service import send_email
 
+print("BACK IN UNEMPLOYMENT FILE")
+
+
 # ENVIRONMENT VARIABLES AND CONSTANTS
 
-load_dotenv()
+load_dotenv() # go look in the .env file for any env vars
 
 API_KEY = os.getenv("ALPHAVANTAGE_API_KEY")
 
-# breakpoint()
+#breakpoint()
 
-# quit()
+#quit()
 
 # FUNCTIONS
 
@@ -56,6 +59,7 @@ if __name__ == "__main__":
     print("LATEST UNEMPLOYMENT RATE:")
     #print(data[0])
 
+
     latest_rate = data[0]['value']
     latest_date = data[0]["date"]
 
@@ -66,6 +70,7 @@ if __name__ == "__main__":
     #
     # What is the average unemployment rate for all months during this calendar year?
     # ... How many months does this cover?
+
 
     this_year = [d for d in data if "2023-" in d["date"]]
 
@@ -80,17 +85,20 @@ if __name__ == "__main__":
     #
     # Plot a line chart of unemployment rates over time.
 
+
     dates = [d["date"] for d in data]
     rates = [float(d["value"]) for d in data]
 
     fig = line(x=dates, y=rates, title="United States Unemployment Rate over time", labels= {"x": "Month", "y": "Unemployment Rate"})
     fig.show()
 
+    # EMAIL SENDING
 
 
-    # ONLY WANT TO DO IF RUNNING THIS FILE FROM COMMAND LINE
-    # (NOT IF IMPORTING A FUNCTION FROM THIS FILE)
+
     user_address = input("Please enter your email address: ")
+
+
 
     content = f"""
     <h1> Unemployment Report Email </h1>

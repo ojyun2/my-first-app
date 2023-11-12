@@ -1,3 +1,4 @@
+
 import os
 
 from dotenv import load_dotenv
@@ -37,6 +38,7 @@ def send_email(recipient_address=SENDER_ADDRESS, subject="[Shopping Cart App] Te
         print(type(err))
         print(err)
         return None
+
 
 
 if __name__ == "__main__":

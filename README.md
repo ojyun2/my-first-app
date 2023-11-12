@@ -22,7 +22,7 @@ Create a ".env" file and paste in the following contents:
 
 ALPHAVANTAGE_API_KEY="_________"
 
-SENDGRID_API_KEY="TODO"
+SENDGRID_API_KEY="_________"
 SENDER_ADDRESS="example.gmail.com"
 ```
 
@@ -44,4 +44,12 @@ Send an example email:
 
 ```sh
 python app/email_service.py
+```
+
+## Testing
+
+Run tests:
+
+```sh
+pytest
 ```
